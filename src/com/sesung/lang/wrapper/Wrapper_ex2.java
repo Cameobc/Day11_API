@@ -42,4 +42,46 @@ public class Wrapper_ex2 {
 			System.out.println("비정상");
 		}
 	}
+	
+	
+	public void ex2() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("주민번호를 입력해주세요.");
+		String num = sc.next();
+		char ch = num.charAt(num.length()-1);
+		//체크용번호
+		int check = Integer.parseInt(String.valueOf(ch));
+		//합계를 담을 번호
+		int sum=0;
+		//곱하기하는변수
+		int count =2;
+		
+		for(int i=0; i<num.length()-1;i++) {
+			char c = num.charAt(i);
+			
+			if(!Character.isDigit(c)) {
+				continue;
+			}
+			
+			String n = String.valueOf(c);
+			int nums = Integer.parseInt(n);
+			sum=sum+nums*count;
+			count++;
+			if(count>9) {
+				count=2;
+			}
+		}
+		sum=sum%11;
+		sum=11-sum;
+		
+		if(sum>9) {
+			sum = sum%10;
+		}
+		
+		if(sum==check) {
+			System.out.println("OK");
+		}else {
+			System.out.println("NO");
+		}
+	}
 }
