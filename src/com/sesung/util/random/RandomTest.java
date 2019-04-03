@@ -11,7 +11,6 @@ public class RandomTest {
 //		num = rd.nextInt(5);  //0-5미만을 출력
 //		System.out.println(num);
 		RandomEx1 rx = new RandomEx1();
-		rx.ex2();
+		rx.ex1();
 	}
-
 }

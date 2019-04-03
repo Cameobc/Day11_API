@@ -44,19 +44,18 @@ public class RandomEx1 {
 		//1~45까지의 숫자 6개
 		int [] lotto = new int [6];
 		Random rd = new Random();
-		boolean check = true;
 		for(int i =0; i<lotto.length; i++) {
 			lotto[i]= rd.nextInt(45)+1;
-			for(int j=0;j<=i; j++) {
-				lotto[j] = rd.nextInt(45)+1;
-				if(lotto[i]==lotto[j]) {
-					j++;
+			for(int j=0;j<i; j++) {//j는 앞에 이는 인덱스번호 i는 현재 뽑은 인덱스 번호
+				if(lotto[j]==lotto[i]) {
+					i--;
+					break;
 				}
-				
 			}
+		}
+		for(int i=0;i<lotto.length;i++) {
 			System.out.println(lotto[i]);
 		}
-
 	}
 
 	public void ex1() {
