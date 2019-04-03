@@ -12,7 +12,7 @@ public class ListExInput {
 	}
 	
 	
-	public ArrayList setinfo(ArrayList <Member> ar) {
+	public Member setinfo() {
 		Member member = new Member();
 		System.out.println("이름 입력");
 		String name = sc.next();
@@ -21,8 +21,7 @@ public class ListExInput {
 		int age = sc.nextInt();
 		member.setAge(age);
 		
-		ar.add(member);
-		return ar;
+		return member;
 	}
 
 }
