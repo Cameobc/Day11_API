@@ -12,7 +12,7 @@ public class ListExMain {
 		ListExView lv = new ListExView();
 		Scanner sc = new Scanner(System.in);
 		boolean check = true;
-		ArrayList ar = new ArrayList();
+		ArrayList<Member> ar = new ArrayList<>();
 		System.out.println("번호 입력");
 
 		while(check) {
